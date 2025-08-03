@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL Private Limited - Career Opportunities</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #1a202c; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); padding: 1.2rem 0; box-shadow: 0 4px 32px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 16px; font-size: 1.8rem; font-weight: 700; color: #1a202c; }
+        .logo-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 8px 32px rgba(26, 32, 44, 0.15); }
+        .logo-icon::before { content: 'SSL'; color: white; font-weight: 800; font-size: 16px; letter-spacing: 1.5px; }
+        .logo-icon::after { content: ''; width: 10px; height: 10px; background: #3182ce; border-radius: 50%; position: absolute; bottom: 8px; right: 8px; box-shadow: 0 0 12px rgba(49, 130, 206, 0.6); }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.3; }
+        .logo-main { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo-sub { font-size: 0.8rem; font-weight: 600; color: #718096; letter-spacing: 3px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #2d3748; font-weight: 500; transition: all 0.3s ease; padding: 8px 16px; border-radius: 8px; }
+        .nav-links a:hover { color: #3182ce; background: rgba(49, 130, 206, 0.08); }
+        .hero { background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)); backdrop-filter: blur(25px); margin: 3rem 0; border-radius: 24px; padding: 5rem 3rem; text-align: center; color: white; box-shadow: 0 16px 64px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 2rem; text-shadow: 0 4px 16px rgba(0,0,0,0.2); font-weight: 800; letter-spacing: -0.8px; line-height: 1.2; }
+        .hero p { font-size: 1.4rem; margin-bottom: 3rem; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .cta-button { background: linear-gradient(135deg, #3182ce, #2c5282); color: white; padding: 18px 36px; border: none; border-radius: 50px; font-size: 1.15rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; box-shadow: 0 8px 32px rgba(49, 130, 206, 0.3); }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(49, 130, 206, 0.4); }
+        .job-section { margin: 4rem 0; }
+        .job-card { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border-radius: 24px; padding: 3rem; margin: 2.5rem 0; box-shadow: 0 16px 64px rgba(0,0,0,0.08); transition: all 0.4s ease; }
+        .job-card:hover { transform: translateY(-8px); box-shadow: 0 24px 80px rgba(0,0,0,0.12); }
+        .job-title { font-size: 2.5rem; color: #1a202c; margin-bottom: 2rem; display: flex; align-items: center; gap: 20px; font-weight: 700; }
+        .job-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .detail-item { background: linear-gradient(135deg, #f7fafc, #edf2f7); padding: 2rem; border-radius: 16px; border-left: 4px solid #3182ce; transition: all 0.3s ease; }
+        .detail-item:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .detail-item h4 { color: #1a202c; margin-bottom: 1rem; font-weight: 700; font-size: 1.2rem; }
+        .detail-item p { color: #4a5568; font-weight: 500; line-height: 1.7; }
+        .responsibilities { background: linear-gradient(135deg, rgba(72, 187, 120, 0.08), rgba(56, 178, 172, 0.06)); padding: 2.5rem; border-radius: 20px; margin: 3rem 0; }
+        .responsibilities h3 { color: #2f855a; margin-bottom: 2rem; font-weight: 700; font-size: 1.6rem; }
+        .responsibilities ul { list-style: none; padding-left: 0; }
+        .responsibilities li { padding: 1rem 0; padding-left: 2.5rem; position: relative; color: #1a202c; font-weight: 500; line-height: 1.7; }
+        .responsibilities li::before { content: "✓"; position: absolute; left: 0; color: #2f855a; font-weight: 800; font-size: 1.2rem; top: 1rem; }
+        .application-form, .contact-section { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border-radius: 24px; padding: 3rem; margin: 4rem 0; box-shadow: 0 16px 64px rgba(0,0,0,0.08); }
+        .application-form h2, .contact-section h2 { color: #1a202c; margin-bottom: 2.5rem; font-weight: 700; font-size: 2rem; text-align: center; }
+        .form-group { margin-bottom: 2rem; }
+        .form-group label { display: block; margin-bottom: 0.8rem; font-weight: 600; color: #2d3748; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 16px 20px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; transition: all 0.3s ease; background: #ffffff; color: #1a202c; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #3182ce; box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1); }
+        .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2.5rem; }
+        .contact-item { text-align: center; padding: 2rem; background: linear-gradient(135deg, #f7fafc, #edf2f7); border-radius: 16px; transition: all 0.3s ease; }
+        .contact-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .contact-item h4 { color: #1a202c; margin-bottom: 1rem; font-weight: 700; font-size: 1.2rem; }
+        .contact-item p { color: #4a5568; line-height: 1.7; font-weight: 500; }
+        .whatsapp-btn { background: linear-gradient(135deg, #25d366, #20ba5a); color: white; padding: 12px 24px; border: none; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 1.5rem; transition: all 0.3s ease; font-weight: 600; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3); }
+        .whatsapp-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+        footer { background: linear-gradient(135deg, #1a202c, #2d3748); color: #e2e8f0; text-align: center; padding: 3rem 0; margin-top: 4rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .nav-links { display: none; } .form-row { grid-template-columns: 1fr; } .logo-text { display: none; } .logo-icon { width: 45px; height: 45px; } .job-title { font-size: 2rem; flex-direction: column; gap: 10px; } .hero { padding: 3rem 2rem; } .job-card, .application-form, .contact-section { padding: 2rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">
+                        <div class="logo-main">SSL</div>
+                        <div class="logo-sub">PRIVATE LIMITED</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#jobs">Careers</a></li>
+                        <li><a href="#apply">Apply Now</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Launch Your Professional Career</h1>
+            <p>Join SSL Private Limited and build a successful future in retail management</p>
+            <a href="#apply" class="cta-button">Apply for Position</a>
+        </section>
+
+        <section id="jobs" class="job-section">
+            <div class="job-card">
+                <h2 class="job-title">🏪 Assistant Supervisor - Retail Operations</h2>
+                
+                <div class="job-details">
+                    <div class="detail-item">
+                        <h4>💰 Compensation Package</h4>
+                        <p>Base Salary: ৳14,500 per month<br>Total Package: ৳16,000 - ৳17,000<br>Including overtime & bonuses</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>⏰ Working Schedule</h4>
+                        <p>Monday to Friday: 9:00 AM - 5:00 PM<br>Total Hours: 8-10 hours<br>Flexible arrangements available</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>📍 Work Locations</h4>
+                        <p>Multiple locations across Dhaka:<br>Uttara • Mirpur • Mohakhali<br>Savar • Gazipur</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>🎁 Employee Benefits</h4>
+                        <p>Accommodation & meals provided<br>4 days monthly leave<br>Festival bonuses<br>Career advancement</p>
+                    </div>
+                </div>
+
+                <div class="responsibilities">
+                    <h3>📋 Key Responsibilities</h3>
+                    <ul>
+                        <li>Supervise daily retail operations and store management</li>
+                        <li>Provide exceptional customer service and support</li>
+                        <li>Handle customer communications</li>
+                        <li>Maintain accurate records and data entry</li>
+                        <li>Manage inventory control and monitoring</li>
+                        <li>Lead and mentor junior staff</li>
+                        <li>Prepare daily reports and documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="apply" class="application-form">
+            <h2>📝 Professional Application Form</h2>
+            <form id="jobApplication">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your complete name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="age" min="18" max="50" required placeholder="Your age">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Mobile Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+880 1XXX-XXXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Current Location *</label>
+                        <input type="text" id="area" name="area" required placeholder="Your area/district">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="education">Educational Qualification *</label>
+                    <select id="education" name="education" required>
+                        <option value="">Select your qualification</option>
+                        <option value="ssc">Secondary School Certificate (SSC)</option>
+                        <option value="hsc">Higher Secondary Certificate (HSC)</option>
+                        <option value="diploma">Diploma in Engineering/Commerce</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="masters">Master's Degree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Previous Work Experience</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Describe your previous work experience..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="current_work">Current Employment Status</label>
+                    <input type="text" id="current_work" name="current_work" placeholder="What are you currently doing?">
+                </div>
+                <button type="submit" class="cta-button">Submit Application</button>
+            </form>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>📞 Professional Contact Information</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📱 WhatsApp Communication</h4>
+                    <p>Send your CV and documents<br><strong style="color: #25d366;">+880 1831-943830</strong><br>Available 24/7</p>
+                    <a href="#" class="whatsapp-btn" onclick="openWhatsApp()">Message on WhatsApp</a>
+                </div>
+                <div class="contact-item">
+                    <h4>🏢 Corporate Office</h4>
+                    <p><strong>SSL Private Limited</strong><br>Bashundhara Residential Area<br>Opposite Jamuna Future Park<br>Dhaka - 1229, Bangladesh</p>
+                </div>
+                <div class="contact-item">
+                    <h4>⏰ Business Hours</h4>
+                    <p><strong>Sunday - Thursday</strong><br>9:00 AM - 6:00 PM<br>Friday: Limited Hours<br>Saturday: Closed</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 20px; margin-top: 3rem; text-align: center; color: white;">
+                <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">📋 Required Documents</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <p>✅ Educational Certificates</p>
+                    <p>✅ National ID Card</p>
+                    <p>✅ Passport Size Photos</p>
+                    <p>✅ Professional CV/Resume</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SSL Private Limited. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('jobApplication').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            const message = `🔔 NEW JOB APPLICATION - SSL Private Limited
+
+👤 Name: ${data.name}
+🎂 Age: ${data.age}
+📞 Phone: ${data.phone}
+📍 Location: ${data.area}
+🎓 Education: ${data.education}
+💼 Experience: ${data.experience || 'Fresh candidate'}
+🔄 Current Status: ${data.current_work || 'Not specified'}
+
+Position: Assistant Supervisor
+Applied: ${new Date().toLocaleDateString()}`;
+            
+            const whatsappUrl = `https://wa.me/8801831943830?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            alert('Application submitted successfully! Please check WhatsApp.');
+            this.reset();
+        });
+
+        function openWhatsApp() {
+            const message = "Hello SSL Private Limited, I am interested in the Assistant Supervisor position. Please let me know the next steps.";
+            const whatsappUrl = `https://wa.me/8801831943830?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+  </html>

@@ -1,2 +1,1 @@
-# ssl-career-website
-SSL Private Limited - Professional Career Website with Job Applications
+github.com/ssl-jobs-bd/ssl-career-website/settings# ssl-career-website with Job Applications
